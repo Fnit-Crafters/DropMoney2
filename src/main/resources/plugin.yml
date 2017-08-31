@@ -1,0 +1,3 @@
+name: DropMoney
+version: @version@
+main: fnitcrafters.dropmoney.DropMoney
