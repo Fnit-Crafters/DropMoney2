@@ -9,7 +9,6 @@ import org.bukkit.event.Listener
 import org.bukkit.entity.LivingEntity
 import org.bukkit.entity.Player
 import org.bukkit.event.entity.EntityDeathEvent
-import org.bukkit.plugin.RegisteredServiceProvider
 
 
 /**
@@ -31,9 +30,6 @@ class FdmListeners(econ: Economy?) : Listener {
         val entity = event.entity ?: return
 
         val killer = entity.killer
-
-//        killer.sendMessage("You destoryed " + entity?.name)
-//        killer.sendMessage(econ?.getBalance(killer.name).toString())
 
         val earnedMoney = event.droppedExp
         val r = econ.depositPlayer(killer.name, earnedMoney.toDouble())

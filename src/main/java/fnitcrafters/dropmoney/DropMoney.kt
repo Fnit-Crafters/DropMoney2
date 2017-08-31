@@ -1,7 +1,6 @@
 package fnitcrafters.dropmoney
 
 import net.milkbowl.vault.economy.Economy
-import org.bukkit.event.Listener
 import org.bukkit.plugin.RegisteredServiceProvider
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -16,7 +15,6 @@ class DropMoney : JavaPlugin() {
             server.pluginManager.disablePlugin(this)
         }
 
-        this.getCommand("fdm").executor = FdmCommand()
         server.pluginManager.registerEvents(FdmListeners(econ), this)
     }
 
