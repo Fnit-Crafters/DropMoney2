@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'kotlin'
 
 group = pluginGroup
 version = pluginVersion
@@ -16,11 +17,17 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven {
+        name = "vault-repo"
+        url = "http://nexus.hc.to/content/repositories/pub_releases"
+    }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile 'org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile group: "net.milkbowl.vault", name: "VaultAPI", version: "1.6"
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
@@ -28,5 +35,14 @@ import org.apache.tools.ant.filters.ReplaceTokens
 processResources {
     from(sourceSets.main.resources.srcDirs) {
         filter ReplaceTokens, tokens: [version: version]
+    }
+}
+buildscript {
+    ext.kotlin_version = '1.1.4-3'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }

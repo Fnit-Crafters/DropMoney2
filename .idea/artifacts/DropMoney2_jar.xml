@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="DropMoney2:jar">
+  <artifact type="jar" build-on-make="true" name="DropMoney2:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/DropMoney2_jar</output-path>
     <root id="archive" name="DropMoney2.jar">
       <element id="module-output" name="DropMoney2_main" />
@@ -14,6 +14,22 @@
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spigotmc/spigot-api/1.12.1-R0.1-SNAPSHOT/a64877cd356ba675f6afc4583c7c70c8755fc2b8/spigot-api-1.12.1-R0.1-SNAPSHOT.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.18/e4a441249ade301985cb8d009d4e4a72b85bf68e/snakeyaml-1.18.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Gradle: org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT" />
+      <element id="library" level="project" name="Gradle: net.milkbowl.vault:VaultAPI:1.6" />
+      <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.4-3" />
+      <element id="library" level="project" name="Gradle: commons-lang:commons-lang:2.6" />
+      <element id="library" level="project" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" />
+      <element id="library" level="project" name="Gradle: com.google.guava:guava:21.0" />
+      <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.0" />
+      <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.18" />
+      <element id="library" level="project" name="Gradle: net.md-5:bungeecord-chat:1.12-SNAPSHOT" />
+      <element id="library" level="project" name="Gradle: org.jetbrains:annotations:13.0" />
+      <element id="library" level="project" name="Gradle: org.bukkit:bukkit:1.9-R0.1-SNAPSHOT" />
+      <element id="library" level="project" name="Gradle: junit:junit:4.10" />
+      <element id="library" level="project" name="Gradle: org.avaje:ebean:2.8.1" />
+      <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.1" />
+      <element id="library" level="project" name="Gradle: javax.persistence:persistence-api:1.0" />
+      <element id="module-output" name="DropMoney2" />
     </root>
   </artifact>
 </component>
