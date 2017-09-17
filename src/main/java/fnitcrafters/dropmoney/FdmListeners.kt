@@ -31,7 +31,7 @@ class FdmListeners(econ: Economy?) : Listener {
 
         val killer = entity.killer
 
-        val earnedMoney = event.droppedExp
+        val earnedMoney = event.droppedExp * 3
         val r = econ.depositPlayer(killer.name, earnedMoney.toDouble())
 
         if(r.transactionSuccess()) {
