@@ -1,6 +1,7 @@
 package fnitcrafters.dropmoney
 
 import net.milkbowl.vault.economy.Economy
+import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.plugin.RegisteredServiceProvider
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -10,12 +11,15 @@ class DropMoney : JavaPlugin() {
 
     override fun onEnable() {
         // Plugin startup logic
+
+        setConfig()
+
         if (!setupEconomy()) {
             logger.info("Cannot enable Vault")
             server.pluginManager.disablePlugin(this)
         }
 
-        server.pluginManager.registerEvents(FdmListeners(econ), this)
+        server.pluginManager.registerEvents(FdmListeners(econ, config), this)
     }
 
     private fun setupEconomy() : Boolean {
@@ -28,6 +32,12 @@ class DropMoney : JavaPlugin() {
         this.econ = rsp.provider
 
         return econ != null
+    }
+
+    private fun setConfig() {
+        config.addDefault("times", 1)
+        config.options().copyDefaults(true)
+        saveConfig()
     }
 
     override fun onDisable() {
