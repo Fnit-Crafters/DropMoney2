@@ -1,0 +1,7 @@
+name: DropMoney
+version: 0.0.1
+main: fnitcrafters.dropmoney.DropMoney
+commands:
+  fdm:
+    description: Your description
+    usage: /fdm

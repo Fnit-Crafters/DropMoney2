@@ -30,6 +30,7 @@
       <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.1" />
       <element id="library" level="project" name="Gradle: javax.persistence:persistence-api:1.0" />
       <element id="module-output" name="DropMoney2" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
     </root>
   </artifact>
 </component>
