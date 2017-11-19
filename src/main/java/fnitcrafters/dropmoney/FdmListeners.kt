@@ -29,7 +29,7 @@ class FdmListeners(econ: Economy?) : Listener {
         val event = event ?: return
         val entity = event.entity ?: return
 
-        val killer = entity.killer
+        val killer = entity.killer ?: return
 
         val earnedMoney = event.droppedExp * 3
         val r = econ.depositPlayer(killer.name, earnedMoney.toDouble())
